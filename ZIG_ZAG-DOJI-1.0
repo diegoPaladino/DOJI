@@ -77,7 +77,25 @@ int OnCalculate(const int rates_total,
      {
       start=prev_calculated-1;
      }
+     
    for(int i=start;i<rates_total;i++)
+   
+   
+   DirectionBuffer[i]=DirectionBuffer[i-1];
+   
+   int ps = i-period+1;
+   
+   int hb=ArrayMaximum(high,ps,period);
+   int lb=ArrayMinimum(low,ps,period);
+   
+   if(hb==i && lb!=i)
+     {
+      DirectionBuffer[i]=1;
+     }
+   else(lb==i && hb!=i)
+     {
+      DirectionBuffer[i]=-1;
+     }
   {
 //---
    
