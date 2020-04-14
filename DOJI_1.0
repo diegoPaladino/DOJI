@@ -6,8 +6,29 @@
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
+enum ESTRATEGIA_ENTRADA
+  {
+   APENAS_MM,     // Apenas Média Móvel
+   APENAS_IFR,    // Apenas Indicador IFR
+   MM_IFR,        // Médias + IFR
+  };
+//---
 
-   input int mediamovel = 200; //Média Móvel
+// Variáveis de Input:
+sinput string s0;
+input ESTRATEGIA_ENTRADA estrategia       = APENAS_MM;      // Estratégia de Entrada Trader
+
+sinput string s1;
+input int mediamovel                      = 200;            // Período Média Móvel
+
+
+
+
+
+
+
+
+
    input double TP = 5; //Take Profit
    input double SL = 5; //Stop Loss
    
