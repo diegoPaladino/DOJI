@@ -20,6 +20,9 @@ input ESTRATEGIA_ENTRADA estrategia       = APENAS_MM;      // Estratégia de En
 
 sinput string s1;
 input int mediamovel                      = 200;            // Período Média Móvel
+input ENUM_TIMEFRAMES mm_tempo_grafico     = PERIOD_CURRENT;// Tempo Gráfico
+input ENUM_MA_METHOD  mm_metodo            = MODE_EMA;      // Método 
+input ENUM_APPLIED_PRICE  mm_preco         = PRICE_CLOSE;   // Preço Aplicado
 
 
 
