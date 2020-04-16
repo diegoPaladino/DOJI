@@ -40,7 +40,13 @@ input double SL                            = 30;            // Stop Loss
 sinput string s4; //---------------------------
 input string hora_limite_fecha_op          = "17:40";       // Horário Limite Fechar Posição
 
+input int ifr_sobrecompra                  = 70;            // Nível de Sobrecompra
+input int ifr_sobrevenda                   = 30;            // Nível de Sobrevenda
 
+sinput string s3; //---------------------------
+input int num_lots                         = 100;           // Número de Lotes
+input double TK                            = 60;            // Take Profit
+input double SL                            = 30;            // Stop Loss
 
 
 
