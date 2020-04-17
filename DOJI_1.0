@@ -10,7 +10,10 @@ enum ESTRATEGIA_ENTRADA
   {
    APENAS_MM,     // Apenas Média Móvel
    APENAS_IFR,    // Apenas Indicador IFR
+   APENAS_ZIG_ZAG,   // Apenas Zig Zag
    MM_IFR,        // Médias + IFR
+   MM_ZIG_ZAG,       // Média Móvel + Zig Zag
+   MM_IFR_ZIG_ZAG,   // Média Móvel + IFR + Zig Zag
   };
 //---
 
