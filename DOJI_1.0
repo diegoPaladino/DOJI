@@ -51,6 +51,18 @@ input int num_lots                         = 100;           // Número de Lotes
 input double TK                            = 60;            // Take Profit
 input double SL                            = 30;            // Stop Loss
 
+//+------------------------------------------------------------------+
+//|  Variáveis para os indicadores                                   |
+//+------------------------------------------------------------------+
+//--- Médias Móveis
+// RÁPIDA - menor período
+   
+int mediamovel_Handle;        // Handle controlador da média móvel rápida
+double mediamovel_Buffer[];   // Buffer para armazenamento dos dados das médias
+
+//--- IFR
+int ifr_Handle;           // Handle controlador para o IFR
+double ifr_Buffer[];      // Buffer para armazenamento dos dados do IFR
 
 
 //+------------------------------------------------------------------+
