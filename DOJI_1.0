@@ -83,6 +83,14 @@ int OnInit()
 mm_mediamovel_Handle = iMA(_Symbol,mm_tempo_grafico,mm_mediamovel_periodo,0,mm_metodo,mm_preco);
 
 ifr_Handle = iRSI(_Symbol,ifr_tempo_grafico,ifr_periodo,ifr_preco);
+
+   CopyRates(_Symbol,_Period,0,4,velas);
+   ArraySetAsSeries(velas,true);
+   
+   // Para adicionar no gráfico o indicador:
+   ChartIndicatorAdd(0,0,mm_mediamovel_Handle); 
+   ChartIndicatorAdd(0,1,ifr_Handle);
+   //---   
    
 //---
    return(INIT_SUCCEEDED);
