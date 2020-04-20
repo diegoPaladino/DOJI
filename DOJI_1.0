@@ -64,6 +64,15 @@ double mediamovel_Buffer[];   // Buffer para armazenamento dos dados das médias
 int ifr_Handle;           // Handle controlador para o IFR
 double ifr_Buffer[];      // Buffer para armazenamento dos dados do IFR
 
+//+------------------------------------------------------------------+
+//| Variáveis para as funçoes                                        |
+//+------------------------------------------------------------------+
+
+int magic_number = 123456;   // Nº mágico do robô
+
+MqlRates velas[];            // Variável para armazenar velas
+MqlTick tick;                // variável para armazenar ticks 
+
 
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
