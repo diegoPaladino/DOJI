@@ -22,7 +22,7 @@ sinput string s0;
 input ESTRATEGIA_ENTRADA estrategia       = APENAS_MM;      // Estratégia de Entrada Trader
 
 sinput string s1;
-input int mediamovel                      = 200;            // Período Média Móvel
+input int mediamovel_periodo               = 200;            // Período Média Móvel
 input ENUM_TIMEFRAMES mm_tempo_grafico     = PERIOD_CURRENT;// Tempo Gráfico
 input ENUM_MA_METHOD  mm_metodo            = MODE_EMA;      // Método 
 input ENUM_APPLIED_PRICE  mm_preco         = PRICE_CLOSE;   // Preço Aplicado
@@ -80,7 +80,9 @@ MqlTick tick;                // variável para armazenar ticks
 int OnInit()
   {
 //---
-   handlemediamovel = iCustom(_Symbol, _Period, "MediaMovel", mediamovel);
+mm_mediamovel_Handle = iMA(_Symbol,mm_tempo_grafico,mm_mediamovel_periodo,0,mm_metodo,mm_preco);
+
+ifr_Handle = iRSI(_Symbol,ifr_tempo_grafico,ifr_periodo,ifr_preco);
    
 //---
    return(INIT_SUCCEEDED);
