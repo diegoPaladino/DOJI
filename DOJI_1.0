@@ -110,6 +110,22 @@ void OnDeinit(const int reason)
 void OnTick()
   {
 //---
-   
+   //desenhaLinhaVertical("L1",tick.time,clrRed);
+   // Copiar um vetor de dados tamanho três para o vetor mm_Buffer
+    CopyBuffer(mm_mediamovel_Handle,0,0,4,mm_lenta_Buffer);
+    
+    CopyBuffer(ifr_Handle,0,0,4,ifr_Buffer);
+    
+    //--- Alimentar Buffers das Velas com dados:
+    CopyRates(_Symbol,_Period,0,4,velas);
+    ArraySetAsSeries(velas,true);
+    
+    // Ordenar o vetor de dados:
+    ArraySetAsSeries(mm_mediamovel_Buffer,true);
+    ArraySetAsSeries(ifr_Buffer,true);
+    //---
+    
+    // Alimentar com dados variável de tick
+    SymbolInfoTick(_Symbol,tick);
   }
 //+------------------------------------------------------------------+
