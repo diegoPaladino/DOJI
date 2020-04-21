@@ -101,7 +101,8 @@ ifr_Handle = iRSI(_Symbol,ifr_tempo_grafico,ifr_periodo,ifr_preco);
 void OnDeinit(const int reason)
   {
 //---
-   
+   IndicatorRelease(mm_mediamovel_Handle);
+   IndicatorRelease(ifr_Handle);
   }
 //+------------------------------------------------------------------+
 //| Expert tick function                                             |
