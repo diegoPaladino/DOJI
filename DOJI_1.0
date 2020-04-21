@@ -112,7 +112,7 @@ void OnTick()
 //---
    //desenhaLinhaVertical("L1",tick.time,clrRed);
    // Copiar um vetor de dados tamanho três para o vetor mm_Buffer
-    CopyBuffer(mm_mediamovel_Handle,0,0,4,mm_lenta_Buffer);
+    CopyBuffer(mm_mediamovel_Handle,0,0,4,mm_mediamovel_Buffer);
     
     CopyBuffer(ifr_Handle,0,0,4,ifr_Buffer);
     
