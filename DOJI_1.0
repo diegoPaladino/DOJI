@@ -129,3 +129,4 @@ void OnTick()
     SymbolInfoTick(_Symbol,tick);
   }
 //+------------------------------------------------------------------+
+// just a comment to test
