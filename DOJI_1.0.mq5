@@ -127,6 +127,7 @@ void OnTick()
     
     // Alimentar com dados variável de tick
     SymbolInfoTick(_Symbol,tick);
+<<<<<<< HEAD
 
         // LOGICA PARA ATIVAR COMPRA 
     bool compra_mm_cros = mm_mediamovel_Buffer[0] > mm_lenta_Buffer[0] &&
@@ -142,3 +143,8 @@ void OnTick()
   }
 //+------------------------------------------------------------------+
 // just a comment to test
+=======
+  }
+//+------------------------------------------------------------------+
+// just a comment to test
+>>>>>>> b81ce9a16387df89869564116d095683627a133b
