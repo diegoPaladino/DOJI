@@ -6,6 +6,7 @@
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
+
 enum ESTRATEGIA_ENTRADA
   {
    APENAS_MM,     // Apenas Média Móvel
@@ -37,7 +38,7 @@ input int ifr_sobrevenda                   = 30;            // Nível de Sobreve
 
 sinput string s3; //---------------------------
 input int num_lots                         = 100;           // Número de Lotes
-input double TK                            = 60;            // Take Profit
+input double TK                            = 60;            // Take Profit(%)
 input double SL                            = 30;            // Stop Loss
 
 sinput string s4; //---------------------------
@@ -55,7 +56,6 @@ input double SL                            = 30;            // Stop Loss
 //|  Variáveis para os indicadores                                   |
 //+------------------------------------------------------------------+
 //--- Médias Móveis
-// RÁPIDA - menor período
    
 int mediamovel_Handle;        // Handle controlador da média móvel rápida
 double mediamovel_Buffer[];   // Buffer para armazenamento dos dados das médias
@@ -70,6 +70,7 @@ double ifr_Buffer[];      // Buffer para armazenamento dos dados do IFR
 
 int magic_number = 123456;   // Nº mágico do robô
 
+// Chamando função para a vela
 MqlRates velas[];            // Variável para armazenar velas
 MqlTick tick;                // variável para armazenar ticks 
 
@@ -77,6 +78,8 @@ MqlTick tick;                // variável para armazenar ticks
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
+
+
 int OnInit()
   {
 //---
@@ -118,7 +121,7 @@ void OnTick()
     
     //--- Alimentar Buffers das Velas com dados:
     CopyRates(_Symbol,_Period,0,4,velas);
-    ArraySetAsSeries(velas,true);
+    ArraySetAsSeries(velas,true);         //organiza a ordem das velas de trás pra fente
     
     // Ordenar o vetor de dados:
     ArraySetAsSeries(mm_mediamovel_Buffer,true);
